@@ -584,12 +584,6 @@ var consoleColors = require('colors'),
 
 console.log('Welcome to fonteroni!'.rainbow);
 
-try {
-  fs.unlinkSync('result.html');
-}
-catch (e) {
-}
-
 var args = process.argv.slice(2);
 if (args.length == 0) {
   console.log('Usage: node index.js PATH_TO_YOUR_FOLDER [--preview]')
