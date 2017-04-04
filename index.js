@@ -650,7 +650,7 @@ else {
           if (args[1] == null || args[1] !== '--preview') {
             var result = data.replace(re, function ($1) {
               return MAPPING[$1.toLowerCase()] ? MAPPING[$1.toLowerCase()] : $1;
-            }).replace(/glyphicon/gi, 'fa');
+            }).replace(/glyphicon\ /gi, 'fa ');
             fs.writeFile(file, result, 'utf8', function (err) {
               if (err) {
                 return console.log(err);
